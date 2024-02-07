@@ -1,0 +1,37 @@
+.terminator-search {
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 3px;
+    position: fixed;
+    left: 15%;
+    z-index: 9;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #f5f5f5 !important;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.terminator-window {
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 3px;
+    position: absolute;
+    left: 15%;
+    top: 25%;
+}
+
+.terminator-window-head {
+    font-size: 25px;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    margin-bottom: 15px;
+}
