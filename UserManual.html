@@ -221,7 +221,8 @@
         .vertical-table {
             display: flex;
             flex-direction: column;
-            text-align: center;
+            text-align: left;
+            margin: 0 auto;
         }
 
         .vertical-table p {
@@ -235,6 +236,8 @@
     <h3>Terminator User Manual</h3>
 
     <p>Terminator is an application that extracts all characters in a published description of a nematode population and reformats these characters as triads “organ / property / value”. Additional data can be added such as modifiers (e.g. “often”, “many”, etc.).</p>
+
+    <p>To use Terminator, prepare a text file with the description of a nematode population. Include only the description, with measurements and ratios. Do not include other details such as the name of the species, the locality and host plant, and the diagnosis if your population is a new species.</p>
 
     <h5>IMPORT TEXT</h5>
 
@@ -287,11 +290,11 @@
 
     <p class="highlight"><strong>Message:</strong></p>
 
-    <ul class="no-wrap">
-        <li>- The segment being analyzed</li>
-        <li>- The triad proposed by TERMINATOR</li>
-        <li>- The term you suggest to be added to the schema</li>
-    </ul>
+    <div class="vertical-table">
+        <p>- The segment being analyzed</p>
+        <p>- The triad proposed by TERMINATOR</p>
+        <p>- The term you suggest to be added to the schema</p>
+    </div>
 
     <p class="centered">The administrator will review the modification you suggest and modify the schema accordingly.</p>
 
@@ -332,3 +335,4 @@
 </body>
 
 </html>
+
