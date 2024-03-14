@@ -151,87 +151,73 @@
 </header>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
-            background-color: #f0f0f0;
-            text-align: center;
-            margin: 20px;
-            font-family: Arial, sans-serif;
-            color: #333;
+            background-color: #f0f0f0; /* Fond en gris */
+            text-align: center; /* Centrage horizontal du contenu */
+            margin: 20px; /* Ajout de marges autour du contenu principal */
+            font-family: Arial, sans-serif; /* Police de caractères */
+            color: #333; /* Couleur du texte */
         }
 
         h3 {
-            background-color: #fff;
+            display: inline-block; /* Pour permettre l'application de la marge */
+            background-color: #fff; /* Fond du titre en blanc pour le démarquer du fond gris */
             padding: 20px;
-            margin: 50px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            margin: 50px auto; /* Ajustement de la marge automatique */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            border-radius: 8px; /* Coins arrondis */
         }
 
-        h5 {
-            margin: 20px 0;
-        }
-
-        p,
-        table {
-            margin-bottom: 10px;
-            text-align: left;
+        p, h5, table {
+            margin-bottom: 20px; /* Ajout de marges en bas de chaque paragraphe, titre et table */
+            text-align: left; /* Alignement du texte à gauche */
         }
 
         ul {
-            list-style-type: none;
-            padding: 0;
+            list-style-type: none; /* Suppression des puces de liste */
+            padding: 0; /* Suppression des marges intérieures */
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 10px; /* Ajout d'une marge en bas de chaque élément de liste */
         }
 
         .no-wrap {
-            white-space: nowrap;
+            white-space: nowrap; /* Empêche les sauts de ligne automatiques */
         }
 
         .centered {
-            text-align: center;
+            text-align: center; /* Centrage horizontal */
         }
 
         .highlight {
-            background-color: #ffffcc;
+            background-color: #ffffcc; /* Couleur de mise en évidence */
         }
 
         .result-section {
-            margin-top: 30px;
+            margin-top: 30px; /* Marge supérieure pour la section de résultats */
         }
 
         table {
-            width: 100%;
-            border-collapse: collapse;
+            width: 100%; /* Tableau occupe toute la largeur */
+            border-collapse: collapse; /* Fusion des bordures de tableau */
         }
 
-        th,
-        td {
-            padding: 10px;
-            border: 1px solid #ddd;
+        th, td {
+            padding: 10px; /* Ajout de rembourrage pour les cellules */
+            border: 1px solid #ddd; /* Bordure de cellule */
         }
 
-        .vertical-table {
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            margin: 0 auto;
-        }
-
-        .vertical-table p {
-            margin: 0;
+        strong {
+            font-weight: bold; /* Mise en gras */
         }
     </style>
     <title>Terminator User Manual</title>
 </head>
-
 <body>
     <h3>Terminator User Manual</h3>
 
@@ -249,7 +235,7 @@
 
     <ul>
         <li>- If the description includes other characters that will have to be treated, click on:</li>
-        <li>- ACCEPT NEXT: Terminator saves the triad and opens and treats the next sentence.</li>
+        <li>- <strong>ACCEPT NEXT:</strong> Terminator saves the triad and opens and treats the next sentence.</li>
     </ul>
 
     <p>When all characters have been treated, click on ACCEPT END to open the page EXPORT RESULTS.</p>
@@ -290,11 +276,11 @@
 
     <p class="highlight"><strong>Message:</strong></p>
 
-    <div class="vertical-table">
-        <p>- The segment being analyzed</p>
-        <p>- The triad proposed by TERMINATOR</p>
-        <p>- The term you suggest to be added to the schema</p>
-    </div>
+    <ul class="no-wrap">
+        <li>- The segment being analyzed</li>
+        <li>- The triad proposed by TERMINATOR</li>
+        <li>- The term you suggest to be added to the schema</li>
+    </ul>
 
     <p class="centered">The administrator will review the modification you suggest and modify the schema accordingly.</p>
 
@@ -303,20 +289,41 @@
     <p class="centered">When you click on EXPORT RESULTS, Terminator displays the following:</p>
 
     <div class="result-section">
-        <div class="vertical-table">
-            <p><strong>Article reference:</strong></p>
-            <p><strong>Species name:</strong></p>
-            <p><strong>Population:</strong></p>
-            <p><strong>Population type:</strong></p>
-            <p><strong>Specimen sex:</strong></p>
-            <p><strong>Specimen stage:</strong></p>
-            <p><strong>Number of females:</strong></p>
-            <p><strong>Number of males:</strong></p>
-
-            <p class="no-wrap">[Only those lines you filled in the page IMPORT TEXT will be displayed]</p>
-            <p class="no-wrap">The description in natural language treated by Terminator.</p>
-        </div>
-
+        <table>
+            <tr>
+                <td class="no-wrap"><strong>Article reference:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Species name:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Population:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Population type:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Specimen sex:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Specimen stage:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Number of females:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Number of males:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap">[Only those lines you filled in the page IMPORT TEXT will be displayed]</td>
+            </tr>
+            <tr>
+                <td class="no-wrap">The description in natural language treated by Terminator.</td>
+            </tr>
+            <tr>
+                <td class="no-wrap">The results given as a table:</td>
+            </tr>
+        </table>
         <table border="1">
             <tr>
                 <th>ORGAN</th>
@@ -325,7 +332,6 @@
                 <th>MODIFIER</th>
             </tr>
         </table>
-
         <p>When you click on DOWNLOAD, Terminator opens a window « Browse » you can use to select the folder where you want to save the results on your computer.</p>
     </div>
 
@@ -333,6 +339,4 @@
 
     <p>When you click on the tab LOGOUT, Terminator displays the following window:</p>
 </body>
-
 </html>
-
