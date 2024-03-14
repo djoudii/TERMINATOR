@@ -215,6 +215,20 @@
         strong {
             font-weight: bold; /* Mise en gras */
         }
+
+        .accept-next-button {
+            padding: 10px 20px; /* Ajout de rembourrage pour le bouton */
+            background-color:  #03877A; /* Couleur de fond */
+            color: white; /* Couleur du texte */
+            border: none; /* Suppression de la bordure */
+            border-radius: 5px; /* Coins arrondis */
+            cursor: pointer; /* Curseur pointeur */
+            transition: background-color 0.3s; /* Transition en douceur */
+        }
+
+        .accept-next-button:hover {
+            background-color: #45a049; /* Couleur de fond au survol */
+        }
     </style>
     <title>Terminator User Manual</title>
 </head>
@@ -235,8 +249,7 @@
 
     <ul>
         <li>- If the description includes other characters that will have to be treated, click on:</li>
-        <li>- <strong>ACCEPT NEXT:</strong> Terminator saves the triad and opens and treats the next sentence.</li>
-    </ul>
+        <li> <button class="accept-next-button" onclick="acceptNext()">ACCEPT NEXT</button> 
 
     <p>When all characters have been treated, click on ACCEPT END to open the page EXPORT RESULTS.</p>
 
@@ -338,5 +351,11 @@
     <h5>LOGOUT</h5>
 
     <p>When you click on the tab LOGOUT, Terminator displays the following window:</p>
+
+    <script>
+        function acceptNext() {
+            alert("Terminator saves the triad and opens and treats the next sentence.");
+        }
+    </script>
 </body>
 </html>
