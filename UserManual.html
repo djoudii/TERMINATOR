@@ -148,6 +148,7 @@
                 document.getElementById("modalexit").style.display="none";
             }
         </script>
+</header>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -156,134 +157,190 @@
     <title>Terminator User Manual</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h5 {
-            background-color: #029688;
-            color: white;
-            padding: 10px;
-            margin-top: 30px;
-        }
-
-        p {
-            margin-bottom: 20px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        .confirmation {
             display: flex;
-            justify-content: space-between;
-            margin-bottom: 20px;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
 
-        .confirmation strong {
-            cursor: pointer;
-            padding: 10px 20px;
-            border: 1px solid #029688;
-            background-color: #029688;
-            color: white;
+        h3 {
             text-align: center;
-        }
-
-        .confirmation strong:hover {
-            background-color: #03877A;
-            border-color: #03877A;
-        }
-
-        .export-results p {
-            background-color: #f4f4f4;
-            padding: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h5>Terminator User Manual</h5>
+    <h5>Terminator User Manual</h5>
+</body>
+</html>
+<h5>IMPORT TEXT</h5>
 
-        <h5>IMPORT TEXT</h5>
+<p>From the HOME page, press ENTER to open the IMPORT TEXT page. Enter your code name for your
+    population. You can also enter some details about that population.
+    Then copy the text in the frame.
+    Press NEXT to open the page EXECUTE</p>
 
-        <p>From the HOME page, press ENTER to open the IMPORT TEXT page. Enter your code name for your
-            population. You can also enter some details about that population.
-            Then copy the text in the frame.
-            Press NEXT to open the page EXECUTE</p>
+<h5>EXECUTE</h5>
 
-        <h5>EXECUTE</h5>
+<p>Terminator selects the first sentence of the description and searches it for terms (names of organs,
+    properties, or values). You will see the sentence being treated and the triad proposed by Terminator. Several triads will be
+    displayed if the sentence includes several characters.
+    If you agree with the triad proposed by Terminator:
+    <ul>
+        <li>If the description includes other characters that will have to be treated, click on:</li>
+        <li>ACCEPT NEXT Terminator saves the triad and opens and treats the next sentence.</li>
+    </ul>
+</p>
 
-        <p>Terminator selects the first sentence of the description and searches it for terms (names of organs,
-            properties, or values). You will see the sentence being treated and the triad proposed by Terminator. Several triads will be
-            displayed if the sentence includes several characters.
-            If you agree with the triad proposed by Terminator:
-        </p>
+<p>When all characters have been treated, click on ACCEPT END to open the page EXPORT RESULTS.</p>
 
-        <p>When all characters have been treated, click on ACCEPT END to open the page EXPORT RESULTS.</p>
+<p>If you think that the triad proposed by Terminator includes some errors:</p>
 
-        <p>If you think that the triad proposed by Terminator includes some errors:</p>
+<p><strong>Wrong organ</strong></p>
+<p>Click on the wrong term: Terminator will display the schema, i.e., a list of accepted organ terms (with
+    synonyms) grouped by systems.
+</p>
 
-        <p><strong>Wrong organ</strong></p>
+<p>If you see the right organ but with a different name:
+    Enter the term used in the description in the column “Synonyms,” and hit Enter on your keyboard.
+    Terminator will display again the triad with the valid name of the organ. You can click on ACCEPT
+    NEXT or ACCEPT END, as above.
+</p>
 
-        <p>If you see the right organ but with a different name:</p>
+<p>If you don’t see the term in the list of organ terms and synonyms:
+    <ul>
+        <li>Search column A to find the system to which the organ belongs</li>
+        <li>Click on that system. A new line is displayed.</li>
+        <li>Enter the missing term in the column “Organs” and hit Enter on your keyboard</li>
+    </ul>
+</p>
 
-        <p>If you don’t see the term in the list of organ terms and synonyms:</p>
+<p>Terminator will display again the triad with the valid name of the organ. You can click on ACCEPT
+    NEXT or ACCEPT END, as above.
+</p>
 
-        <p><strong>Wrong property</strong></p>
+<p><strong>Wrong property</strong></p>
 
-        <p><strong>Wrong value or no value found</strong></p>
+<p>Click on the wrong term: Terminator will display the list of accepted properties (with synonyms)
+    Select the correct property. Add the term from the description in the column Synonyms.
+    Terminator will display again the triad with the valid name of the property. You can click on ACCEPT
+    NEXT or ACCEPT END, as above.
+</p>
 
-        <p>When you add an organ or property term in the schema, the following message is sent to the
-            administrator (fortuner@wanadoo.fr):
-        </p>
+<p><strong>Wrong value or no value found</strong></p>
 
-        <p><strong>Subject:</strong> Terminator schema modification</p>
+<p>Click on the value term in the sentence.
+    Terminator will display again the triad with the valid name of the value. You can click on ACCEPT
+    NEXT or ACCEPT END, as above.
+</p>
 
-        <p><strong>Message:</strong></p>
+<p>When you add an organ or property term in the schema, the following message is sent to the
+    administrator (fortuner@wanadoo.fr):
+</p>
 
-        <p>The administrator will review the modification you suggest and modify the schema accordingly.</p>
+<p><strong>Subject:</strong> Terminator schema modification</p>
+<p><strong>Message:</strong></p>
+<ul>
+    <li>The segment being analyzed</li>
+    <li>The triad proposed by TERMINATOR</li>
+    <li>The term you suggest to be added to the schema</li>
+</ul>
 
-        <h5>EXPORT RESULTS</h5>
+<p>The administrator will review the modification you suggest and modify the schema accordingly.</p>
 
-        <p>When you click on EXPORT RESULTS, Terminator displays the following:</p>
+<h5>EXPORT RESULTS</h5>
 
-        <p>When you click on DOWNLOAD, Terminator opens a window « Browse » you can use to select the
-            folder where you want to save the results on your computer.
-        </p>
+<p>When you click on EXPORT RESULTS, Terminator displays the following:</p>
 
-        <h5>LOGOUT</h5>
+<p><strong>Article reference:</strong></p>
+<p><strong>Species name:</strong></p>
+<p><strong>Population:</strong></p>
+<p><strong>Population type:</strong></p>
+<p><strong>Specimen sex:</strong></p>
+<p><strong>Specimen stage:</strong></p>
+<p><strong>Number of females:</strong></p>
+<p><strong>Number of males:</strong></p>
 
-        <p>When you click on the tab LOGOUT, Terminator displays the following window:</p>
+<p>[Only those lines you filled in the page IMPORT TEXT will be displayed]</p>
 
-        <p>If you click on YES, Terminator checks whether you have saved your session.</p>
+<p>The description in natural language treated by Terminator.</p>
+<p>The results given as a table:</p>
+<table border="1">
+    <tr>
+        <th>ORGAN</th>
+        <th>PROPERTY</th>
+        <th>VALUE</th>
+        <th>MODIFIER</th>
+    </tr>
+</table>
 
-        <p>If you did save it, Terminator closes.</p>
+<p>When you click on DOWNLOAD, Terminator opens a window « Browse » you can use to select the
+    folder where you want to save the results on your computer.
+</p>
 
-        <p>If you didn’t save it, Terminator displays the following window:</p>
+<h5>LOGOUT</h5>
 
-        <p>If you click on YES, Terminator closes.</p>
+<p>When you click on the tab LOGOUT, Terminator displays the following window:</p>
 
-        <p>If you click on NO, Terminator opens the page EXPORT RESULTS</p>
+<p>Are you sure you want to exit Terminator?</p>
 
-        <div class="export-results">
-            <p>For better styling, you can customize the CSS as needed.</p>
-        </div>
+<p><strong>YES</strong> <strong>NO</strong></p>
+
+<p>If you click on YES, Terminator checks whether you have saved your session.</p>
+
+<p>If you did save it, Terminator closes.</p>
+
+<p>If you didn’t save it, Terminator displays the following window:</p>
+
+<p>If you exit Terminator now, your results will be lost. To save your results, click on the tab EXPORT
+    RESULTS.
+</p>
+
+<p>Do you really want to exit Terminator?</p>
+
+<p><strong>YES</strong> <strong>NO</strong></p>
+
+<p>If you click on YES, Terminator closes.</p>
+
+<p>If you click on NO, Terminator opens the page EXPORT RESULTS</p>
+
+</body>
+</html>
+
+
+
+// POUR MODIFIER LE LOG OUT VOIR AVCE INES si ça fonctionne 
+ <h5>LOGOUT</h5>
+
+    <p>When you click on the tab LOGOUT, Terminator displays the following window:</p>
+
+    <p>Are you sure you want to exit Terminator?</p>
+
+    <div class="confirmation">
+        <strong>YES</strong>
+        <strong>NO</strong>
     </div>
+
+    <p>If you click on YES, Terminator checks whether you have saved your session.</p>
+
+    <p>If you did save it, Terminator closes.</p>
+
+    <p>If you didn’t save it, Terminator displays the following window:</p>
+
+    <p>If you exit Terminator now, your results will be lost. To save your results, click on the tab EXPORT RESULTS.</p>
+
+    <div class="confirmation">
+        <strong>YES</strong>
+        <strong>NO</strong>
+    </div>
+
+    <p>If you click on YES, Terminator closes.</p>
+
+    <p>If you click on NO, Terminator opens the page EXPORT RESULTS</p>
+
+    <div class="export-results">
+        <p>For better styling, you can customize the CSS as needed.</p>
+    </div>
+
 </body>
 </html>
