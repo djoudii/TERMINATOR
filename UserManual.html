@@ -148,154 +148,199 @@
                 document.getElementById("modalexit").style.display="none";
             }
         </script>
-</header>
 <!DOCTYPE html>
-
-<!-- CSS pour le menu déroulant -->
-<style>
-.window {
-    margin: 40px auto;
-    background: white;
-    padding: 30px;
-    border-radius: 3px;
-    position: absolute;
-    left: 15%;
-    top: 15%;
-	height: 900px;
-	right : 15%;
-	bottom : 15%;
-}
-</style>
-<!-- debut html  -->
-<html>
- 
-<!-- Mirrored from genisys.prd.fr/terminator/help.php by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jan 2024 18:09:09 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<html lang="en">
 <head>
-   <meta charset="utf-8">
-   <link rel="stylesheet" href="terminator.css">
-     <link rel="stylesheet" href="explore.css">
-       <link rel="stylesheet" href="font-awersome.css">
-         <link rel="stylesheet" href="materialize.css">
-         <!--Affiche le menu complet -->
-             <!-- CSS pour le menu déroulant -->
-<style>
-    .right{
-        position : absolute;
-        top : 0px;
-        right : 0px;
-    }
-    /* Dropdown Button */
-    .mydropbtn {
-        background-color: #029688; /* Couleur pour le boutton */
-        color: white;
-        padding: 0px 16px;
-        font-size: 16px;
-        border: none;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: #f0f0f0; /* Fond en gris */
+            text-align: center; /* Centrage horizontal du contenu */
+            margin: 20px; /* Ajout de marges autour du contenu principal */
+            font-family: Arial, sans-serif; /* Police de caractères */
+            color: #333; /* Couleur du texte */
+        }
 
+        h3 {
+            background-color: #fff; /* Fond du titre en blanc pour le démarquer du fond gris */
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
+            border-radius: 8px; /* Coins arrondis */
+            margin: 0 auto 50px auto; /* Ajustement de la marge automatique */
+            display: inline-block; /* Pour permettre l'application de la marge */
+            text-align: center; /* Centrage du titre */
+        }
 
-    /* The container <div> - needed to position the dropdown content */
-    .mydropdown {
-        position: relative;
-        display: inline-block;
-    }
+        p, h5, table {
+            margin-bottom: 20px; /* Ajout de marges en bas de chaque paragraphe, titre et table */
+            text-align: left; /* Alignement du texte à gauche */
+        }
 
-    /* Dropdown Content - onglets déroulants */
-    .mydropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #029688; /* Couleurs pour les onglets dans le menu déroulant */
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        right: 0; /* for right to left - right:0 on the mydropdown-content if you want the dropdown content to go from right to left */
-        z-index: 1;
-    }
+        h5 {
+            margin-left: auto; /* Alignement du titre à gauche */
+            margin-right: auto; /* Alignement du titre à droite */
+            text-align: center; /* Centrage du titre */
+        }
 
-    /* Links inside the dropdown */
-    .mydropdown-content a {
-        color: white;
-        padding: 0px 16px;
-        text-decoration: none;
-        display: block;
-    }
+        ul {
+            list-style-type: none; /* Suppression des puces de liste */
+            padding: 0; /* Suppression des marges intérieures */
+        }
 
-    /* Couleur lorsque la souris est sur le boutton */
-    .mydropdown-content a:hover {
-        background-color: #03877A;
-    }
+        li {
+            margin-bottom: 10px; /* Ajout d'une marge en bas de chaque élément de liste */
+        }
 
-    .mydropdown:hover .mydropdown-content {
-        display: block;
-    }
+        .no-wrap {
+            white-space: nowrap; /* Empêche les sauts de ligne automatiques */
+        }
 
-    .mydropdown:hover .mydropbtn {
-        background-color: #03877A;
-    }
+        .centered {
+            text-align: center; /* Centrage horizontal */
+        }
 
-</style>
-<header>
-  <div id="header" class="navbar-fixed" style="z-index: 998;">
-    <nav>
-      <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo center">TERMINATOR 2.4</a>
-        <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="index.html">Home</a></li>
-            
-        </ul >
-        <!-- Here was the log in and log out -->
-        <ul class="right">
-					<li><a href="help.html">FAQs</a></li>
+        .highlight {
+            font-weight: bold; /* Mise en gras */
+        }
 
-                </ul>
-      </div>
-    </nav>
-  </div>
-    <div id="modalexit" class="modal">
-        <div class="center">
-            <div class="modal-content">
-                <table>
-                    <tr>
-                        <td>
-                            <center>
-                                <FONT size="5.5">Are you sure you want to exit terminator ?</FONT>
-                            </center>
-                        </td>
-                    </tr>
-                </table>
-            </div>
+        .result-section {
+            margin-top: 30px; /* Marge supérieure pour la section de résultats */
+        }
 
-            <div class="modal-footer">
-                <table>
-                    <tr>
-                        <td>
-                            <center>
-                                <a href="index.html" class="modal-action modal-close btn-flat">
-                                    <FONT size="5.5"> YES </FONT></a>
-                            </center>
-                        </td>
-                        <td>
-                            <center>
-                                <a data-role="info"onclick='collapseLogout()' class="modal-action modal-close btn-flat">
-                                <FONT size="5.5"> NO </FONT></a>
+        table {
+            width: 100%; /* Tableau occupe toute la largeur */
+            border-collapse: collapse; /* Fusion des bordures de tableau */
+            margin: auto; /* Centrage horizontal du tableau */
+        }
 
-                            </center>
-                        </td>
-                    </tr>
-                </table>
+        th, td {
+            padding: 10px; /* Ajout de rembourrage pour les cellules */
+            border: 1px solid #ddd; /* Bordure de cellule */
+            text-align: center; /* Centrage du contenu des cellules */
+        }
 
-            </div>
-        </div>
+        strong {
+            font-weight: bold; /* Mise en gras */
+        }
+    </style>
+    <title>Terminator User Manual</title>
+</head>
+<body>
+    <h3>Terminator User Manual</h3>
 
-        <script>
-            function displayLogout(){
+    <p>Terminator is an application that extracts all characters in a published description of a nematode population and reformats these characters as triads “organ / property / value”. Additional data can be added such as modifiers (e.g. “often”, “many”, etc.).</p>
 
-                document.getElementById("modalexit").style.display="block";
-            }
-        </script>
-        <script>
-            function collapseLogout(){
+    <p>To use Terminator, prepare a text file with the description of a nematode population. Include only the description, with measurements and ratios. Do not include other details such as the name of the species, the locality and host plant, and the diagnosis if your population is a new species.</p>
 
-                document.getElementById("modalexit").style.display="none";
-            }
-        </script>
+    <h5>IMPORT TEXT</h5>
+
+    <p>From the HOME page, press ENTER to open the IMPORT TEXT page. Enter your code name for your population. You can also enter some details about that population. Then copy the text in the frame. Press NEXT to open the page EXECUTE</p>
+
+    <h5>EXECUTE</h5>
+
+    <p>Terminator selects the first sentence of the description and searches it for terms (names of organs, properties, or values). You will see the sentence being treated and the triad proposed by Terminator. Several triads will be displayed if the sentence includes several characters. If you agree with the triad proposed by Terminator:</p>
+
+    <ul>
+        <li><strong>If the description includes other characters that will have to be treated, click on:</strong></li>
+    </ul>
+
+    <p>When all characters have been treated, click on ACCEPT END to open the page EXPORT RESULTS.</p>
+
+    <p>If you think that the triad proposed by Terminator includes some errors:</p>
+
+    <p class="highlight"><strong>Wrong organ</strong></p>
+
+    <p>Click on the wrong term: Terminator will display the schema, i.e., a list of accepted organ terms (with synonyms) grouped by systems.</p>
+
+    <p>If you see the right organ but with a different name:
+        Enter the term used in the description in the column “Synonyms,” and hit Enter on your keyboard.
+        Terminator will display again the triad with the valid name of the organ. You can click on ACCEPT
+        NEXT or ACCEPT END, as above.
+    </p>
+
+    <p>If you don’t see the term in the list of organ terms and synonyms:</p>
+
+    <ul>
+        <li>Search column A to find the system to which the organ belongs</li>
+        <li>Click on that system. A new line is displayed.</li>
+        <li>Enter the missing term in the column “Organs” and hit Enter on your keyboard</li>
+    </ul>
+
+    <p>Terminator will display again the triad with the valid name of the organ. You can click on ACCEPT NEXT or ACCEPT END, as above.</p>
+
+    <p class="highlight"><strong>Wrong property</strong></p>
+
+    <p>Click on the wrong term: Terminator will display the list of accepted properties (with synonyms) Select the correct property. Add the term from the description in the column Synonyms. Terminator will display again the triad with the valid name of the property. You can click on ACCEPT NEXT or ACCEPT END, as above.</p>
+
+    <p class="highlight"><strong>Wrong value or no value found</strong></p>
+
+    <p>Click on the value term in the sentence. Terminator will display again the triad with the valid name of the value. You can click on ACCEPT NEXT or ACCEPT END, as above.</p>
+
+    <p>When you add an organ or property term in the schema, the following message is sent to the administrator (fortuner@wanadoo.fr):</p>
+
+    <p class="highlight"><strong>Subject:</strong> Terminator schema modification</p>
+
+    <p class="highlight"><strong>Message:</strong></p>
+
+    <ul class="no-wrap">
+        <li>- The segment being analyzed</li>
+        <li>- The triad proposed by TERMINATOR</li>
+        <li>- The term you suggest to be added to the schema</li>
+    </ul>
+
+    <p class="centered">The administrator will review the modification you suggest and modify the schema accordingly.</p>
+
+    <h5>EXPORT RESULTS</h5>
+
+    <p class="centered">When you click on EXPORT RESULTS, Terminator displays the following:</p>
+
+    <div class="result-section">
+        <table>
+            <tr>
+                <td class="no-wrap"><strong>Article reference:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Species name:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Population:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Population type:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Specimen sex:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Specimen stage:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Number of females:</strong></td>
+            </tr>
+            <tr>
+                <td class="no-wrap"><strong>Number of males:</strong></td>
+            </tr>
+        </table>
+        <table border="1">
+            <tr>
+                <th>ORGAN</th>
+                <th>PROPERTY</th>
+                <th>VALUE</th>
+                <th>MODIFIER</th>
+            </tr>
+        </table>
+        <p>When you click on DOWNLOAD, Terminator opens a window « Browse » you can use to select the folder where you want to save the results on your computer.</p>
+    </div>
+
+    <h5>LOGOUT</h5>
+
+    <p>When you click on the tab LOGOUT, Terminator displays the following window:</p>
+
+    <script>
+        function acceptNext() {
+            alert("Terminator saves the triad and opens and treats the next sentence.");
+        }
+    </script>
+</body>
+</html>
