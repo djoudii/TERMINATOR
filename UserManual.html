@@ -163,14 +163,17 @@
             color: #333; /* Couleur du texte */
         }
 
-        h3 {
-            display: inline-block; /* Pour permettre l'application de la marge */
-            background-color: #fff; /* Fond du titre en blanc pour le démarquer du fond gris */
-            padding: 20px;
-            margin: 50px auto; /* Ajustement de la marge automatique */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre légère */
-            border-radius: 8px; /* Coins arrondis */
-        }
+            h3 {
+    display: inline-block;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: none; /* Ajoutez cette ligne pour supprimer la bordure */
+    background-color: transparent; /* Ajoutez cette ligne pour rendre le fond transparent */
+}
+
+        
 
         p, h5, table {
             margin-bottom: 20px; /* Ajout de marges en bas de chaque paragraphe, titre et table */
