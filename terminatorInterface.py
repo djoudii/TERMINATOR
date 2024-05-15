@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
     listBuffer=[]
     def addTriad(self):
         self.tableViewResultExecute.addRow()
-##############################################################################
+###################################################################################
             ###Saving method 
     def creationFichier (self):
         D=datetime.date.today()
