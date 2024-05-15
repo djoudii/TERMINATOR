@@ -268,7 +268,7 @@ def export(listeTriades):
          
 #---------- Creation of the file / Testing of the functions -------------------#
         
-dico_relativeprop = import_dico('Fichier_Dictionnaire.xls',u'relativeProp')
+dico_relativeprop = import_dico('./Fichier_Dictionnaire.xls',u'relativeProp')
 register(dico_relativeprop,'relativeProp')
 test2 = opening('relativeProp')
 print(test2)
