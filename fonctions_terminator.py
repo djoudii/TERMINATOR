@@ -111,7 +111,7 @@ def pseudo_main(source):
 #        print("Sentence: " + i)
 #        print("The triad : ", finalDicoText[i])
 #        print("*")
-    return(finalDicoText)
+    return {'finalDicoText': finalDicoText, 'finalListTriad': finalListTriad}
     
 ###############################################################################
 # ---------- Research functions (organs, properties, values) ---------------- #

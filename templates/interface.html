@@ -1,80 +1,60 @@
 <!DOCTYPE html>
 <html>
- 
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-
 <head>
-   <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terminator 2.1</title>
-   <link rel="stylesheet" href="terminator.css">
-     <link rel="stylesheet" href="explore.css">
-       <link rel="stylesheet" href="font-awersome.css">
-         <link rel="stylesheet" href="materialize.css">
-    <!-- Menu qui est affiché avant que l'utilisateur ne se soit connecté-->
+    <title>Terminator 2.4</title>
+    <!-- Ajoutez les liens vers vos fichiers CSS -->
+    <link rel="stylesheet" href="static/terminator.css">
+    <link rel="stylesheet" href="static/explore.css">
+    <link rel="stylesheet" href="static/font-awersome.css">
+    <link rel="stylesheet" href="static/materialize.css">
+    <link rel="stylesheet" href="static/design.css">
+
+</head>
+<body>
     <header>
-      <div id="header" class="navbar-fixed" style="z-index: 998;">
-          <nav>
-              <div class="nav-wrapper">
-                  <a href="#" class="brand-logo center">TERMINATOR</a>
-                  <ul id="nav-mobile" class="left hide-on-med-and-down">
-                      <li><a href="#">Home</a></li>
-                  </ul>
-                  <ul class="right">
-                      <li><a href="#">FAQs</a></li>
-                  </ul>
-              </div>
-          </nav>
-      </div>
-  </header>
+        <div id="header" class="navbar-fixed" style="z-index: 998;">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo center">TERMINATOR 2.4</a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Import Text</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="index.html">Schema</a></li>
+                        <li><a href="UserManual.html">User Manual</a></li>
+                        <li><a href="help.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-  <main id="main-wrapper" class="grey lighten-4">
-      <div class="container">
-          <div class="row">
-              <div class="col s12">
-                  <h4>Published description</h4>
-                  <textarea id="published-description" class="materialize-textarea" placeholder="Enter published description here"></textarea>
-              </div>
-          </div>
+    <main id="main-wrapper" class="grey lighten-4">
+        <div class="container">          
+            <div class="row">
+                <h3>Published description</h3>
+                <form action="/result" method="post">
+                    <textarea name="source" placeholder="Enter published description here"></textarea>
+                    <table>
+                        <tbody>
+                                <tr><input type="text" placeholder="REF N°"></tr>
+                                <tr><input type="text" placeholder="Species Name"></tr>
+                                <tr><input type="text" placeholder="Population"></tr>
+                                <tr><input type="text" placeholder="Number female"></tr>
+                                <tr><input type="text" placeholder="Number male"></tr>
+                                <tr><input type="text" placeholder="Number juv"></tr>
+                        </tbody>
+                    </table>
+                    
+                    <button type="submit" class="btn waves-effect waves-light">Next</button>
+                </form>
+            </div>
+        </div>
+    </main>
 
-          <div class="row">
-              <div class="col s12">
-                  <h4>Results:</h4>
-                  <table id="results-table" class="striped">
-                      <thead>
-                          <tr>
-                              <th>Organ</th>
-                              <th>Property</th>
-                              <th>Value</th>
-                              <th>Validated</th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <!-- Table rows will be dynamically added here -->
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-
-          <div class="row">
-              <div class="col s12">
-                  <button id="add-triad-btn" class="waves-effect waves-light btn">Add Triad</button>
-                  <button id="delete-triad-btn" class="waves-effect waves-light btn">Delete Triad</button>
-                  <button id="undo-btn" class="waves-effect waves-light btn">Undo</button>
-                  <button id="save-a-job-btn" class="waves-effect waves-light btn">Save a Job</button>
-                  <button id="save-btn" class="waves-effect waves-light btn">Save</button>
-              </div>
-          </div>
-      </div>
-  </main>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script>
-      
-  </script>
+    <footer class="footer">
+        <center>© Fortuner, 2024</center>
+    </footer>
 </body>
-
-
 </html>
-

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Terminator 2.4</title>
+    <!-- Ajoutez les liens vers vos fichiers CSS -->
+    <link rel="stylesheet" href="static/terminator.css">
+    <link rel="stylesheet" href="static/explore.css">
+    <link rel="stylesheet" href="static/font-awersome.css">
+    <link rel="stylesheet" href="static/materialize.css">
+    <link rel="stylesheet" href="static/design.css">
+</head>
+<body>
+    <header>
+        <div id="header" class="navbar-fixed" style="z-index: 998;">
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo center">TERMINATOR 2.4</a>
+                    <ul id="nav-mobile" class="left hide-on-med-and-down">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html">Import Text</a></li>
+                    </ul>
+                    <ul class="right">
+                        <li><a href="index.html">Schema</a></li>
+                        <li><a href="UserManual.html">User Manual</a></li>
+                        <li><a href="help.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+<body>   
+    
+    <div class="container">
+    <h3>Published description</h3>
+
+    <!-- Affichage du texte traité -->
+    <textarea id="processedText" rows="10">{{ processed_text }}</textarea>
+
+        <h3>Results</h3>
+
+        <!-- Affichage des données textuelles -->
+        <!-- <h2>Final Dico Text</h2>
+        <ul>
+            {% for key, value in processed_data.finalDicoText.items() %}
+                <li><strong>{{ key }}:</strong> {{ value }}</li>
+            {% endfor %}
+        </ul> -->
+        <button id="addTriadeButton"class="btn waves-effect waves-light">Add Triade</button>
+        <button id="saveButton"class="btn waves-effect waves-light">Save</button>
+        <button id="saveButton"class="btn waves-effect waves-light">Undo</button>
+        <br><br>
+                <!-- Affichage des triades dans un tableau -->
+                <table id="tableTriades"></tableid>
+                    <thead>
+                        <tr>
+                            <th>Organ</th>
+                            <th>Property</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for triad in processed_data.finalListTriad %}
+                            <tr>
+                                <td>{{ triad[0] }}</td>
+                                <td>{{ triad[1] }}</td>
+                                <td>{{ triad[2] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+
+
+<script>
+    // Récupère le texte traité de la page précédente
+    var processedText = "{{ processed_text }}";
+    
+    // Met le texte traité dans la zone de texte
+    document.getElementById('processedText').value = processedText;
+        // Récupère le tableau
+            var table = document.querySelector('table');
+            
+            // Ajoute un gestionnaire d'événements au tableau
+            table.addEventListener('click', function(event) {
+                // Vérifie si le clic a été effectué sur une cellule du tableau
+                if (event.target.tagName === 'TD') {
+                    // Active l'édition de la cellule
+                    event.target.setAttribute('contenteditable', true);
+                    // Ajoute un style pour indiquer l'édition
+                    event.target.style.backgroundColor = '#ffffcc';
+                }
+            });
+            
+            // Ajoute un gestionnaire d'événements pour sauvegarder les modifications
+            table.addEventListener('blur', function(event) {
+                // Vérifie si la cellule est en mode édition
+                if (event.target.tagName === 'TD' && event.target.getAttribute('contenteditable')) {
+                    // Désactive l'édition de la cellule
+                    event.target.removeAttribute('contenteditable');
+                    // Retire le style d'édition
+                    event.target.style.backgroundColor = '';
+                }
+            });
+    
+// Gestion du clic sur le bouton "Add Triade"
+document.getElementById('addTriadeButton').addEventListener('click', function() {
+    // Création des éléments HTML pour représenter une nouvelle triade
+    var newRow = document.createElement('tr'); // Création d'une nouvelle ligne de tableau
+
+    var organCell = document.createElement('td'); // Cellule pour l'organe
+    var organInput = document.createElement('input'); // Champ de texte pour l'organe
+    organCell.appendChild(organInput); // Ajout du champ de texte à la cellule
+    newRow.appendChild(organCell); // Ajout de la cellule à la nouvelle ligne
+
+    var valueCell = document.createElement('td'); // Cellule pour la valeur
+    var valueInput = document.createElement('input'); // Champ de texte pour la valeur
+    valueCell.appendChild(valueInput); // Ajout du champ de texte à la cellule
+    newRow.appendChild(valueCell); // Ajout de la cellule à la nouvelle ligne
+
+    var propertyCell = document.createElement('td'); // Cellule pour la propriété
+    var propertyInput = document.createElement('input'); // Champ de texte pour la propriété
+    propertyCell.appendChild(propertyInput); // Ajout du champ de texte à la cellule
+    newRow.appendChild(propertyCell); // Ajout de la cellule à la nouvelle ligne
+
+    // Ajout de la nouvelle ligne au tableau
+    document.getElementById('tableTriades').appendChild(newRow);
+});
+
+
+// Gestion du clic sur le bouton "Save"
+document.getElementById('saveButton').addEventListener('click', function() {
+    // Ajoutez ici le code pour sauvegarder la liste des triades dans un fichier texte
+});
+
+// Fonction pour télécharger un fichier texte
+function downloadTriades() {
+    // Récupère la liste des triades
+    var triades = "Contenu du fichier texte avec les triades";
+    // Crée un objet Blob contenant le contenu du fichier texte
+    var blob = new Blob([triades], { type: 'text/plain' });
+    // Crée un URL pour le Blob
+    var url = window.URL.createObjectURL(blob);
+    // Crée un élément d'ancre pour le téléchargement
+    var a = document.createElement('a');
+    // Définit l'URL de l'ancre sur l'URL du Blob
+    a.href = url;
+    // Définit le nom du fichier à télécharger
+    a.download = 'triades.txt';
+    // Ajoute l'ancre à la page
+    document.body.appendChild(a);
+    // Clique sur l'ancre pour démarrer le téléchargement
+    a.click();
+    // Supprime l'ancre de la page
+    document.body.removeChild(a);
+    // Révoque l'URL du Blob
+    window.URL.revokeObjectURL(url);
+}
+
+// Gestion du clic sur le bouton "Save"
+document.getElementById('saveButton').addEventListener('click', function() {
+    // Télécharge la liste des triades dans un fichier texte
+    downloadTriades();
+});
+
+</script>
+
+    <footer class="footer">
+        <center>© Fortuner, 2024</center>
+    </footer>
+</body>
+</html>

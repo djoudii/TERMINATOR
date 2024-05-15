@@ -1,11 +1,9 @@
-
-
 <!DOCTYPE html>
-  <link rel="stylesheet" href="terminator.css">
-    <link rel="stylesheet" href="explore.css">
-      <link rel="stylesheet" href="font-awersome.css">
-        <link rel="stylesheet" href="materialize.css">
-          <link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="static/terminator.css">
+<link rel="stylesheet" href="static/explore.css">
+<link rel="stylesheet" href="static/font-awersome.css">
+<link rel="stylesheet" href="static/materialize.css">
+<link rel="stylesheet" href="static/design.css"> 
     <!-- CSS pour le menu déroulant -->
 <style>
     .right{
@@ -60,6 +58,7 @@
     .mydropdown:hover .mydropbtn {
         background-color: #03877A;
     }
+    
 
 </style>
 <header>
@@ -69,8 +68,7 @@
         <a href="index.html" class="brand-logo center">TERMINATOR 2.4</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
             <li><a href="index.html">Home</a></li>
-            <li><a href="index.html">Import Text</a></li>
-            <li><a href="index.html">Execute</a></li>
+            <li><a href="templates/interface.html">Import Text</a></li>
             
         </ul >
         <!-- Here was the log in and log out -->
@@ -82,60 +80,8 @@
                 </ul>
       </div>
     </nav>
-  </div>
-    <div id="modalexit" class="modal">
-        <div class="center">
-            <div class="modal-content">
-                <table>
-                    <tr>
-                        <td>
-                            <center>
-                                <FONT size="5.5">Are you sure you want to exit Terminator ?</FONT>
-                            </center>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-
-            <div class="modal-footer">
-                <table>
-                    <tr>
-                        <td>
-                            <center>
-                                <a href="index.html" class="modal-action modal-close btn-flat">
-                                    <FONT size="5.5"> YES </FONT></a>
-                            </center>
-                        </td>
-                        <td>
-                            <center>
-                                <a data-role="info"onclick='collapseLogout()' class="modal-action modal-close btn-flat">
-                                <FONT size="5.5"> NO </FONT></a>
-
-                            </center>
-                        </td>
-                    </tr>
-                </table>
-
-            </div>
-        </div>
-
-        
-
-        <script>
-            function displayLogout(){
-
-                document.getElementById("modalexit").style.display="block";
-            }
-        </script>
-        <script>
-            function collapseLogout(){
-
-                document.getElementById("modalexit").style.display="none";
-            }
-        </script>
-        <li><a href="index.html">Import Text</a></li>
+</div>
 </header>
- <!-- Inclu le menu-->
 <!--Texte de présentation-->
   <div class="container">
 

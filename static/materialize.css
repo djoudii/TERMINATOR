@@ -20400,3 +20400,129 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
 }
 
 }
+
+
+#editableTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#editableTable th {
+  padding: 10px;
+  text-align: left;
+  background-color: #f2f2f2;
+}
+
+#editableTable input[type="text"] {
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  padding: 8px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+#editableTable input[type="text"]:focus {
+  background-color: #f0f0f0;
+}
+  /* Styles pour les boutons */
+  .btn {
+    background-color: #029688;
+    color: white;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Styles pour les zones de texte */
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #029688;
+}
+
+/* Styles pour les titres */
+h4 {
+    color: #029688;
+}
+
+/* Styles pour les tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #029688;
+}
+
+th, td {
+    border: 1px solid #029688;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Styles pour les conteneurs */
+.container {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles pour les colonnes */
+.col {
+    margin-bottom: 20px;
+}
+
+        /* Styles pour les boutons */
+        .btn {
+          background-color: #029688;
+          color: white;
+          border-radius: 20px;
+          padding: 10px 20px;
+          margin-right: 10px;
+          font-size: 16px;
+          border: none;
+          cursor: pointer;
+      }
+
+      /* Styles pour les zones de texte */
+      textarea {
+          width: 100%;
+          padding: 10px;
+          border-radius: 10px;
+          border: 2px solid #029688;
+      }
+
+      /* Styles pour les titres */
+      h4 {
+          color: #029688;
+      }
+
+      /* Styles pour les tables */
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          border: 2px solid #029688;
+      }
+
+      th, td {
+          border: 1px solid #029688;
+          padding: 8px;
+          text-align: left;
+      }
+
+      /* Styles pour les conteneurs */
+      .container {
+          padding: 20px;
+          background-color: #f0f0f0;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Styles pour les colonnes */
+      .col {
+          margin-bottom: 20px;
+      }
