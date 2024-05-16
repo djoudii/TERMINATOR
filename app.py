@@ -18,7 +18,7 @@ def index():
 def result():
     if request.method == 'POST':
         source = request.form['source']
-        processed_data = pseudo_main(source)  # Appel de pseudo_main() pour obtenir les données traitées
+        processed_data = pseudo_main(source) 
         return render_template('result.html', processed_data=processed_data)
     
 
